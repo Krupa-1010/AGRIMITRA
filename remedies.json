@@ -1,0 +1,72 @@
+[
+  {
+    "disease_name": "Late Blight",
+    "symptoms": ["dark spots on leaves", "white mold", "wilting", "brown patches"],
+    "remedy_name": "Copper Fungicide Treatment",
+    "steps": [
+      "Remove and destroy infected plant parts",
+      "Apply copper-based fungicide every 7-10 days",
+      "Improve air circulation around plants",
+      "Avoid overhead watering",
+      "Apply fungicide early morning or late evening"
+    ],
+    "duration_days": 21,
+    "effectiveness": "High"
+  },
+  {
+    "disease_name": "Powdery Mildew",
+    "symptoms": ["white powdery coating", "yellowing leaves", "stunted growth", "leaf curling"],
+    "remedy_name": "Sulfur Spray Treatment",
+    "steps": [
+      "Mix 1 tablespoon sulfur powder with 1 gallon water",
+      "Spray affected areas thoroughly",
+      "Repeat every 3-5 days for 2 weeks",
+      "Remove heavily infected leaves",
+      "Improve air circulation"
+    ],
+    "duration_days": 14,
+    "effectiveness": "Very High"
+  },
+  {
+    "disease_name": "Bacterial Leaf Spot",
+    "symptoms": ["small dark spots", "yellowing around spots", "leaf drop", "water-soaked lesions"],
+    "remedy_name": "Bacterial Control Treatment",
+    "steps": [
+      "Remove infected leaves immediately",
+      "Apply copper-based bactericide",
+      "Avoid overhead watering",
+      "Space plants for better air circulation",
+      "Apply treatment every 5-7 days"
+    ],
+    "duration_days": 28,
+    "effectiveness": "Moderate"
+  },
+  {
+    "disease_name": "Root Rot",
+    "symptoms": ["wilting despite adequate water", "yellowing leaves", "stunted growth", "brown roots"],
+    "remedy_name": "Root Rot Recovery Treatment",
+    "steps": [
+      "Improve soil drainage immediately",
+      "Reduce watering frequency",
+      "Apply fungicide to soil",
+      "Remove severely affected plants",
+      "Add organic matter to improve soil structure"
+    ],
+    "duration_days": 35,
+    "effectiveness": "Moderate"
+  },
+  {
+    "disease_name": "Aphid Infestation",
+    "symptoms": ["sticky honeydew", "curled leaves", "stunted growth", "visible small insects"],
+    "remedy_name": "Natural Aphid Control",
+    "steps": [
+      "Spray with neem oil solution (2 tbsp per gallon)",
+      "Introduce beneficial insects (ladybugs)",
+      "Remove heavily infested leaves",
+      "Apply insecticidal soap",
+      "Repeat treatment every 3-5 days"
+    ],
+    "duration_days": 14,
+    "effectiveness": "High"
+  }
+]

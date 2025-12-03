@@ -1,0 +1,340 @@
+"""
+AgriMitra Agentic Prototype - LangGraph Workflow
+"""
+import json
+import logging
+from typing import Dict, Any, List, Optional, TypedDict
+from langgraph.graph import StateGraph, END
+from agents import ReasonerNode, DiseaseAgentNode, PriceAgentNode, CoordinatorNode
+
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+class WorkflowState(TypedDict):
+    """State schema for the LangGraph workflow"""
+    user_input: str
+    reasoner_output: Optional[Dict[str, Any]]
+    disease_agent_output: Optional[Dict[str, Any]]
+    price_agent_output: Optional[Dict[str, Any]]
+    coordinator_output: Optional[Dict[str, Any]]
+    final_response: Optional[str]
+    next_nodes: List[str]
+    execution_log: List[Dict[str, Any]]
+
+class AgriMitraWorkflow:
+    """Main workflow class that orchestrates the entire agentic system"""
+    
+    def __init__(self):
+        # Initialize all nodes
+        self.reasoner = ReasonerNode()
+        self.disease_agent = DiseaseAgentNode()
+        self.price_agent = PriceAgentNode()
+        self.coordinator = CoordinatorNode()
+        
+        # Build the graph
+        self.graph = self._build_graph()
+    
+    def _build_graph(self) -> StateGraph:
+        """Build the LangGraph workflow"""
+        workflow = StateGraph(WorkflowState)
+        
+        # Add nodes
+        workflow.add_node("reasoner", self._reasoner_node)
+        workflow.add_node("disease_agent", self._disease_agent_node)
+        workflow.add_node("price_agent", self._price_agent_node)
+        workflow.add_node("coordinator", self._coordinator_node)
+        
+        # Define the flow
+        workflow.set_entry_point("reasoner")
+        
+        # Conditional edges from reasoner
+        workflow.add_conditional_edges(
+            "reasoner",
+            self._route_after_reasoner,
+            {
+                "disease_agent": "disease_agent",
+                "price_agent": "price_agent",
+                "both_agents": "disease_agent",  # Start with disease agent, then price
+                "coordinator": "coordinator",
+                END: END
+            }
+        )
+        
+        # From disease agent
+        workflow.add_conditional_edges(
+            "disease_agent",
+            self._route_after_disease_agent,
+            {
+                "price_agent": "price_agent",
+                "coordinator": "coordinator",
+                END: END
+            }
+        )
+        
+        # From price agent to coordinator
+        workflow.add_edge("price_agent", "coordinator")
+        
+        # From coordinator to end
+        workflow.add_edge("coordinator", END)
+        
+        return workflow.compile()
+    
+    def _reasoner_node(self, state: WorkflowState) -> WorkflowState:
+        """Reasoner node execution"""
+        logger.info("Executing Reasoner Node")
+        
+        try:
+            result = self.reasoner.process(state["user_input"])
+            
+            # Log execution
+            execution_log = state.get("execution_log", [])
+            execution_log.append({
+                "node": "reasoner",
+                "input": state["user_input"],
+                "output": result,
+                "timestamp": self._get_timestamp()
+            })
+            
+            return {
+                **state,
+                "reasoner_output": result,
+                "next_nodes": result.get("next_nodes", []),
+                "execution_log": execution_log
+            }
+            
+        except Exception as e:
+            logger.error(f"Reasoner node error: {e}")
+            execution_log = state.get("execution_log", [])
+            execution_log.append({
+                "node": "reasoner",
+                "error": str(e),
+                "timestamp": self._get_timestamp()
+            })
+            
+            return {
+                **state,
+                "reasoner_output": {"error": str(e)},
+                "next_nodes": [],
+                "execution_log": execution_log
+            }
+    
+    def _disease_agent_node(self, state: WorkflowState) -> WorkflowState:
+        """Disease agent node execution"""
+        logger.info("Executing Disease Agent Node")
+        
+        try:
+            reasoner_data = state.get("reasoner_output", {})
+            crop = reasoner_data.get("reasoner_output", {}).get("crop")
+            
+            result = self.disease_agent.process(state["user_input"], crop)
+            
+            # Log execution
+            execution_log = state.get("execution_log", [])
+            execution_log.append({
+                "node": "disease_agent",
+                "input": {"user_input": state["user_input"], "crop": crop},
+                "output": result,
+                "timestamp": self._get_timestamp()
+            })
+            
+            return {
+                **state,
+                "disease_agent_output": result,
+                "execution_log": execution_log
+            }
+            
+        except Exception as e:
+            logger.error(f"Disease agent node error: {e}")
+            execution_log = state.get("execution_log", [])
+            execution_log.append({
+                "node": "disease_agent",
+                "error": str(e),
+                "timestamp": self._get_timestamp()
+            })
+            
+            return {
+                **state,
+                "disease_agent_output": {"error": str(e)},
+                "execution_log": execution_log
+            }
+    
+    def _price_agent_node(self, state: WorkflowState) -> WorkflowState:
+        """Price agent node execution"""
+        logger.info("Executing Price Agent Node")
+        
+        try:
+            reasoner_data = state.get("reasoner_output", {})
+            crop = reasoner_data.get("reasoner_output", {}).get("crop")
+            
+            if not crop:
+                crop = "unknown"
+            
+            result = self.price_agent.process(crop)
+            
+            # Log execution
+            execution_log = state.get("execution_log", [])
+            execution_log.append({
+                "node": "price_agent",
+                "input": {"crop": crop},
+                "output": result,
+                "timestamp": self._get_timestamp()
+            })
+            
+            return {
+                **state,
+                "price_agent_output": result,
+                "execution_log": execution_log
+            }
+            
+        except Exception as e:
+            logger.error(f"Price agent node error: {e}")
+            execution_log = state.get("execution_log", [])
+            execution_log.append({
+                "node": "price_agent",
+                "error": str(e),
+                "timestamp": self._get_timestamp()
+            })
+            
+            return {
+                **state,
+                "price_agent_output": {"error": str(e)},
+                "execution_log": execution_log
+            }
+    
+    def _coordinator_node(self, state: WorkflowState) -> WorkflowState:
+        """Coordinator node execution"""
+        logger.info("Executing Coordinator Node")
+        
+        try:
+            # Collect all agent outputs
+            agent_outputs = []
+            
+            if state.get("disease_agent_output"):
+                agent_outputs.append(state["disease_agent_output"])
+            
+            if state.get("price_agent_output"):
+                agent_outputs.append(state["price_agent_output"])
+            
+            result = self.coordinator.process(state["user_input"], agent_outputs)
+            
+            # Log execution
+            execution_log = state.get("execution_log", [])
+            execution_log.append({
+                "node": "coordinator",
+                "input": {"user_input": state["user_input"], "agent_outputs": agent_outputs},
+                "output": result,
+                "timestamp": self._get_timestamp()
+            })
+            
+            return {
+                **state,
+                "coordinator_output": result,
+                "final_response": result.get("final_response", "No response generated"),
+                "execution_log": execution_log
+            }
+            
+        except Exception as e:
+            logger.error(f"Coordinator node error: {e}")
+            execution_log = state.get("execution_log", [])
+            execution_log.append({
+                "node": "coordinator",
+                "error": str(e),
+                "timestamp": self._get_timestamp()
+            })
+            
+            return {
+                **state,
+                "coordinator_output": {"error": str(e)},
+                "final_response": f"Error in coordination: {e}",
+                "execution_log": execution_log
+            }
+    
+    def _route_after_reasoner(self, state: WorkflowState) -> str:
+        """Route after reasoner based on next_nodes"""
+        next_nodes = state.get("next_nodes", [])
+        # If reasoner flagged out_of_scope, go straight to coordinator
+        try:
+            ro = state.get("reasoner_output", {})
+            inner = ro.get("reasoner_output", ro)
+            if inner.get("intent") and "out_of_scope" in inner.get("intent"):
+                return "coordinator"
+        except Exception:
+            pass
+        
+        if "disease_agent" in next_nodes and "price_agent" in next_nodes:
+            return "both_agents"
+        elif "disease_agent" in next_nodes:
+            return "disease_agent"
+        elif "price_agent" in next_nodes:
+            return "price_agent"
+        else:
+            return "coordinator"  # Default to coordinator if no specific agents
+    
+    def _route_after_disease_agent(self, state: WorkflowState) -> str:
+        """Route after disease agent"""
+        next_nodes = state.get("next_nodes", [])
+        
+        if "price_agent" in next_nodes:
+            return "price_agent"
+        else:
+            return "coordinator"
+    
+    def _get_timestamp(self) -> str:
+        """Get current timestamp"""
+        from datetime import datetime
+        return datetime.now().isoformat()
+    
+    def run(self, user_input: str) -> Dict[str, Any]:
+        """Run the complete workflow"""
+        logger.info(f"Starting workflow with input: {user_input}")
+        
+        # Initialize state
+        initial_state = WorkflowState(
+            user_input=user_input,
+            reasoner_output=None,
+            disease_agent_output=None,
+            price_agent_output=None,
+            coordinator_output=None,
+            final_response=None,
+            next_nodes=[],
+            execution_log=[]
+        )
+        
+        try:
+            # Run the workflow
+            final_state = self.graph.invoke(initial_state)
+            
+            logger.info("Workflow completed successfully")
+            return final_state
+            
+        except Exception as e:
+            logger.error(f"Workflow execution error: {e}")
+            return {
+                "error": str(e),
+                "final_response": f"Workflow error: {e}",
+                "execution_log": []
+            }
+    
+    def get_execution_summary(self, final_state: Dict[str, Any]) -> str:
+        """Get a summary of the execution for debugging/demonstration"""
+        summary = []
+        summary.append("=== AgriMitra Workflow Execution Summary ===")
+        summary.append(f"User Input: {final_state.get('user_input', 'N/A')}")
+        summary.append("")
+        
+        # Log execution steps
+        execution_log = final_state.get("execution_log", [])
+        for i, log_entry in enumerate(execution_log, 1):
+            summary.append(f"Step {i}: {log_entry.get('node', 'unknown')}")
+            if "error" in log_entry:
+                summary.append(f"  Error: {log_entry['error']}")
+            else:
+                summary.append(f"  Input: {log_entry.get('input', 'N/A')}")
+                summary.append(f"  Output: {json.dumps(log_entry.get('output', {}), indent=2)}")
+            summary.append("")
+        
+        summary.append("=== Final Response ===")
+        summary.append(final_state.get("final_response", "No response generated"))
+        
+        return "\n".join(summary)
