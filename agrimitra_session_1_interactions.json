@@ -1,93 +1,484 @@
 [
   {
-    "user_input": "My tomato plants have yellow spots on leaves",
-    "final_response": "**What\u2019s happening?**  \nYour tomatoes are showing the classic signs of **Tomato Yellow Leaf Spot** caused by *Pseudomonas syringae pv. tomato*. The disease starts as small, water\u2011soaked yellow spots that can merge into larger lesions, often spreading quickly if conditions are right (high humidity, poor airflow, or wet foliage).\n\n---\n\n## Quick\u2011Start Action Plan (24\u201348\u202fh)\n\n| Step | What to Do | Why It Helps |\n|------|------------|--------------|\n| **1. Inspect & Prune** | Remove all infected leaves and any that are turning yellow or brown. Cut at least 1\u202fin. below the healthy tissue. | Cuts off the bacteria\u2019s food source and reduces inoculum. |\n| **2. Improve Air Circulation** | Thin out crowded plants, prune lower leaves, and space rows 18\u201324\u202fin. apart. | Dry leaves faster \u2192 less favorable for bacterial growth. |\n| **3. Water Wisely** | Water at the soil level in the morning; avoid overhead sprinklers. | Keeps foliage dry and limits splash\u2011dispersal of bacteria. |\n| **4. Sanitize Tools** | Disinfect pruning shears with 10\u202f% bleach or 70\u202f% alcohol after each cut. | Prevents spreading the pathogen between plants. |\n| **5. Apply a Copper\u2011Based Bactericide** | If available, mix 1\u202ftsp of copper sulfate (or 1\u202foz of copper oxychloride) in 1\u202fqt of water and spray until foliage is wet. Repeat every 7\u201310\u202fdays. | Copper is the most common, inexpensive option for bacterial leaf spot. |\n| **6. Use Resistant Varieties** | For future plantings, choose cultivars labeled \u201cbacterial leaf spot resistant\u201d (e.g., \u2018Roma\u2019, \u2018San Marzano\u2019, or newer hybrids). | Genetic resistance is the most sustainable long\u2011term solution. |\n| **7. Monitor & Record** | Check plants daily for new spots. Keep a simple log (date, symptoms, treatment). | Helps you spot trends and adjust tactics early. |\n\n---\n\n## If You Need More Help\n\n- **Local Extension or Agronomist** \u2013 They can confirm the diagnosis and recommend region\u2011specific bactericides or resistant varieties.\n- **Community Forums** \u2013 Share photos on local farming groups or online forums; often other growers have practical tips for your climate.\n\n---\n\n## Fertilizer Shop Note\n\nThe disease agent didn\u2019t return any nearby fertilizer shops. If you need a copper product or other supplies, try:\n\n1. Expanding your search radius (e.g., 10\u202fmi instead of 5\u202fmi).  \n2. Checking larger garden centers or agricultural supply stores in nearby towns.  \n3. Calling local nurseries to ask if they carry copper bactericides or resistant tomato seeds.\n\n---\n\n### Bottom Line\n\nAct fast\u2014remove infected leaves, improve airflow, and apply a copper spray. Keep the plants dry and monitor closely. If the problem persists or worsens, reach out to a local expert for a tailored solution. Good luck, and your tomatoes will thank you for the early intervention!",
-    "timestamp": "2025-10-16T06:55:43.968565",
+    "user_input": "D:\\MainProject\\AGRIMITRA\\potato.jpeg",
+    "final_response": "**Diagnosis (AI\u2011based)**  \n- **Crop:** Potato  \n- **Disease:** Early Blight (high\u2011confidence, 99.9997\u202f%)  \n- **Detection method:** CNN image analysis  \n\nThe model is almost certain that the symptoms you captured belong to Early\u202fBlight. This is a common fungal disease that can quickly reduce yield if not managed promptly.\n\n---\n\n## What to do right now\n\n| Step | Action | Why it matters | Practical tip |\n|------|--------|----------------|---------------|\n| **1** | **Isolate the affected plant** | Prevents the pathogen from spreading to healthy tubers and neighboring plants. | Keep the plant in a separate area or cover it with a plastic sheet. |\n| **2** | **Remove and destroy infected leaves** | Reduces the source of spores that spread the disease. | Cut leaves at the base, discard them in a sealed bag or burn them. |\n| **3** | **Improve airflow & spacing** | Fungi thrive in humid, stagnant air. | Thin out crowded rows and prune excess foliage. |\n| **4** | **Adjust irrigation** | Avoid overhead watering; wet leaves accelerate infection. | Water at the soil surface early in the morning or use drip irrigation. |\n| **5** | **Apply a fungicide** | Early\u202fBlight is responsive to several fungicides. | \u2022 **Copper sulfate** (1\u202fL per 100\u202fL water, apply every 7\u201310\u202fdays). <br>\u2022 **Chlorothalonil** (1\u202fL per 100\u202fL water, apply every 7\u201310\u202fdays). <br>\u2022 **Mancozeb** (1\u202fL per 100\u202fL water, apply every 7\u201310\u202fdays). <br>Always follow label instructions and rotate active ingredients to avoid resistance. |\n| **6** | **Monitor the crop** | Early detection of new spots allows quicker response. | Inspect leaves twice a week; if new lesions appear, repeat steps 2\u20135. |\n| **7** | **Consider resistant varieties** | Long\u2011term protection. | When replanting, choose varieties rated \u201cEarly\u202fBlight tolerant\u201d (e.g., \u201cKennebec\u201d or \u201cRed Pontiac\u201d). |\n\n---\n\n## Preventive care for the future\n\n- **Crop rotation** \u2013 avoid planting potatoes in the same field for 3\u20134 years.  \n- **Use certified disease\u2011free seed tubers** \u2013 check for any signs of rot or lesions before planting.  \n- **Maintain soil fertility** \u2013 balanced NPK and organic matter improve plant vigor.  \n- **Cover crops** \u2013 a light cover crop (e.g., clover) can reduce soil moisture and suppress fungal spores.  \n\n---\n\n## Nearby fertilizer shops (Kochi, KL, India)\n\n> **No shops were found within the specified radius via OpenStreetMap.**  \n> However, you can quickly locate suppliers using the links below:\n\n- **Fertilizer shop** \u2013 <https://www.google.com/maps/search/fertilizer+shop/@9.9406,76.2653,15z>\n- **Agricultural input store** \u2013 <https://www.google.com/maps/search/agricultural+input+store/@9.9406,76.2653,15z>\n- **Agro shop** \u2013 <https://www.google.com/maps/search/agro+shop/@9.9406,76.2653,15z>\n- **Pesticide shop** \u2013 <https://www.google.com/maps/search/pesticide+shop/@9.9406,76.2653,15z>\n- **Seed store** \u2013 <https://www.google.com/maps/search/seed+store/@9.9406,76.2653,15z>\n- **Fertilizer store** \u2013 <https://www.google.com/maps/search/fertilizer+store/@9.9406,76.2653,15z>\n\nIf you don\u2019t find what you need, widen the radius or try a different search term (e.g., \u201cagro input\u201d or \u201cchemical store\u201d).  \n\n---\n\n### Quick recap\n\n1. **Early\u202fBlight detected with 99.9997\u202f% confidence (CNN).**  \n2. **Act fast:** isolate, remove infected tissue, improve airflow, adjust irrigation, and apply a fungicide.  \n3. **Prevent future outbreaks** with crop rotation, resistant varieties, and good cultural practices.  \n4. **Shop for inputs** using the Google Maps links above if local suppliers are not listed.\n\nYou\u2019ve got the diagnosis and a clear action plan\u2014now it\u2019s time to protect your crop and keep those potatoes healthy!",
+    "timestamp": "2025-12-29T21:44:46.315051",
     "execution_log": [
       {
         "node": "reasoner",
-        "input": "My tomato plants have yellow spots on leaves",
+        "input": {
+          "user_input": "Analyze this plant image for disease detection",
+          "image_path": "D:\\MainProject\\AGRIMITRA\\potato.jpeg"
+        },
         "output": {
           "reasoner_output": {
             "intent": [
               "disease"
             ],
-            "crop": "tomato",
+            "crop": null,
             "agents_to_trigger": [
               "disease_agent"
             ]
           },
-          "user_input": "My tomato plants have yellow spots on leaves",
+          "user_input": "Analyze this plant image for disease detection",
           "next_nodes": [
             "disease_agent"
           ]
         },
-        "timestamp": "2025-10-16T06:55:41.751162"
+        "timestamp": "2025-12-29T21:43:54.593412"
       },
       {
         "node": "disease_agent",
         "input": {
-          "user_input": "My tomato plants have yellow spots on leaves",
-          "crop": "tomato"
+          "user_input": "Analyze this plant image for disease detection",
+          "crop": null,
+          "image_path": "D:\\MainProject\\AGRIMITRA\\potato.jpeg"
         },
         "output": {
           "disease_diagnosis": {
-            "disease": "Tomato Yellow Leaf Spot (Pseudomonas syringae pv. tomato)",
-            "confidence": "medium",
+            "disease": "Early Blight",
+            "crop": "Potato",
+            "confidence": "high",
+            "confidence_score": 0.9999973773956299,
             "needs_remedy": true,
-            "explanation": "Yellow, water\u2011soaked spots that may coalesce into larger lesions are characteristic of Tomato Yellow Leaf Spot, a bacterial disease common in tomatoes. Early detection and management (cultural practices, resistant varieties, or bactericides) are recommended to prevent spread."
+            "explanation": "CNN model detected: Potato___Early_blight with 100.0% confidence",
+            "is_healthy": false,
+            "detection_method": "CNN",
+            "top_3_predictions": [
+              {
+                "class": "Potato___Early_blight",
+                "confidence": 0.9999973773956299
+              },
+              {
+                "class": "Tomato___Septoria_leaf_spot",
+                "confidence": 1.269984068130725e-06
+              },
+              {
+                "class": "Tomato___Late_blight",
+                "confidence": 1.1975603229075205e-06
+              }
+            ]
           },
-          "remedy_info": {
-            "error": "No remedy found for disease: Tomato Yellow Leaf Spot (Pseudomonas syringae pv. tomato)",
-            "suggestion": "Please consult with a local agricultural expert"
+          "remedy_info": null,
+          "shops_info": {
+            "location": {
+              "lat": 9.9406,
+              "lon": 76.2653,
+              "display_name": "Kochi, KL, India",
+              "city": "Kochi",
+              "region": "KL",
+              "country": "India"
+            },
+            "results": {
+              "error": "No fertilizer shops found in the specified radius via OpenStreetMap",
+              "count": 0,
+              "shops": [],
+              "google_maps_search_urls": [
+                {
+                  "query": "fertilizer shop",
+                  "url": "https://www.google.com/maps/search/fertilizer+shop/@9.9406,76.2653,15z",
+                  "alt_url": "https://www.google.com/maps/search/?api=1&query=fertilizer+shop+near+9.9406,76.2653",
+                  "description": "Search for fertilizer shop near this location"
+                },
+                {
+                  "query": "agricultural input store",
+                  "url": "https://www.google.com/maps/search/agricultural+input+store/@9.9406,76.2653,15z",
+                  "alt_url": "https://www.google.com/maps/search/?api=1&query=agricultural+input+store+near+9.9406,76.2653",
+                  "description": "Search for agricultural input store near this location"
+                },
+                {
+                  "query": "agro shop",
+                  "url": "https://www.google.com/maps/search/agro+shop/@9.9406,76.2653,15z",
+                  "alt_url": "https://www.google.com/maps/search/?api=1&query=agro+shop+near+9.9406,76.2653",
+                  "description": "Search for agro shop near this location"
+                },
+                {
+                  "query": "pesticide shop",
+                  "url": "https://www.google.com/maps/search/pesticide+shop/@9.9406,76.2653,15z",
+                  "alt_url": "https://www.google.com/maps/search/?api=1&query=pesticide+shop+near+9.9406,76.2653",
+                  "description": "Search for pesticide shop near this location"
+                },
+                {
+                  "query": "seed store",
+                  "url": "https://www.google.com/maps/search/seed+store/@9.9406,76.2653,15z",
+                  "alt_url": "https://www.google.com/maps/search/?api=1&query=seed+store+near+9.9406,76.2653",
+                  "description": "Search for seed store near this location"
+                },
+                {
+                  "query": "fertilizer store",
+                  "url": "https://www.google.com/maps/search/fertilizer+store/@9.9406,76.2653,15z",
+                  "alt_url": "https://www.google.com/maps/search/?api=1&query=fertilizer+store+near+9.9406,76.2653",
+                  "description": "Search for fertilizer store near this location"
+                }
+              ],
+              "note": "Use the Google Maps search URLs above to find shops directly on Google Maps (free, no API key required)"
+            }
           },
-          "shops_info": null,
+          "cnn_result": {
+            "disease": "Early Blight",
+            "crop": "Potato",
+            "full_class_name": "Potato___Early_blight",
+            "confidence": 0.9999973773956299,
+            "top_3_predictions": [
+              {
+                "class": "Potato___Early_blight",
+                "confidence": 0.9999973773956299
+              },
+              {
+                "class": "Tomato___Septoria_leaf_spot",
+                "confidence": 1.269984068130725e-06
+              },
+              {
+                "class": "Tomato___Late_blight",
+                "confidence": 1.1975603229075205e-06
+              }
+            ],
+            "is_healthy": false,
+            "all_predictions": {
+              "Apple___Apple_scab": 1.2485111902660329e-11,
+              "Apple___Black_rot": 1.118964934036413e-17,
+              "Apple___Cedar_apple_rust": 6.025656141072917e-21,
+              "Apple___healthy": 1.2146718484911664e-16,
+              "Blueberry___healthy": 1.6687984219272496e-18,
+              "Cherry_(including_sour)___Powdery_mildew": 9.038868905524175e-18,
+              "Cherry_(including_sour)___healthy": 3.5701521898790063e-28,
+              "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": 2.3407821904755655e-13,
+              "Corn_(maize)___Common_rust_": 1.8750901168134576e-13,
+              "Corn_(maize)___Northern_Leaf_Blight": 3.342309688850908e-16,
+              "Corn_(maize)___healthy": 3.0736493761459213e-29,
+              "Grape___Black_rot": 2.9359756003191448e-21,
+              "Grape___Esca_(Black_Measles)": 1.642204772028823e-19,
+              "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": 2.3242828106617708e-08,
+              "Grape___healthy": 4.423207421634356e-27,
+              "Orange___Haunglongbing_(Citrus_greening)": 9.94721925878452e-21,
+              "Peach___Bacterial_spot": 1.900442693839044e-12,
+              "Peach___healthy": 1.3355421288367552e-25,
+              "Pepper,_bell___Bacterial_spot": 5.984210089265973e-12,
+              "Pepper,_bell___healthy": 4.425467329712129e-20,
+              "Potato___Early_blight": 0.9999973773956299,
+              "Potato___Late_blight": 1.0369878289395729e-09,
+              "Potato___healthy": 2.9035846463051136e-30,
+              "Raspberry___healthy": 2.228845904837073e-31,
+              "Soybean___healthy": 2.454678165607913e-24,
+              "Squash___Powdery_mildew": 1.5069733239059246e-09,
+              "Strawberry___Leaf_scorch": 8.619335289949959e-08,
+              "Strawberry___healthy": 1.9422919437261276e-16,
+              "Tomato___Bacterial_spot": 4.778229678245594e-13,
+              "Tomato___Early_blight": 2.2482120609623735e-09,
+              "Tomato___Late_blight": 1.1975603229075205e-06,
+              "Tomato___Leaf_Mold": 5.198964089098146e-12,
+              "Tomato___Septoria_leaf_spot": 1.269984068130725e-06,
+              "Tomato___Spider_mites Two-spotted_spider_mite": 9.396560439805281e-20,
+              "Tomato___Target_Spot": 3.7910204692798675e-15,
+              "Tomato___Tomato_Yellow_Leaf_Curl_Virus": 3.741871862125096e-21,
+              "Tomato___Tomato_mosaic_virus": 3.018180788188246e-29,
+              "Tomato___healthy": 1.408764683794161e-16
+            }
+          },
           "agent": "disease_agent"
         },
-        "timestamp": "2025-10-16T06:55:42.352834"
+        "timestamp": "2025-12-29T21:44:36.804511"
       },
       {
         "node": "coordinator",
         "input": {
-          "user_input": "My tomato plants have yellow spots on leaves",
+          "user_input": "Analyze this plant image for disease detection",
           "agent_outputs": [
             {
               "disease_diagnosis": {
-                "disease": "Tomato Yellow Leaf Spot (Pseudomonas syringae pv. tomato)",
-                "confidence": "medium",
+                "disease": "Early Blight",
+                "crop": "Potato",
+                "confidence": "high",
+                "confidence_score": 0.9999973773956299,
                 "needs_remedy": true,
-                "explanation": "Yellow, water\u2011soaked spots that may coalesce into larger lesions are characteristic of Tomato Yellow Leaf Spot, a bacterial disease common in tomatoes. Early detection and management (cultural practices, resistant varieties, or bactericides) are recommended to prevent spread."
+                "explanation": "CNN model detected: Potato___Early_blight with 100.0% confidence",
+                "is_healthy": false,
+                "detection_method": "CNN",
+                "top_3_predictions": [
+                  {
+                    "class": "Potato___Early_blight",
+                    "confidence": 0.9999973773956299
+                  },
+                  {
+                    "class": "Tomato___Septoria_leaf_spot",
+                    "confidence": 1.269984068130725e-06
+                  },
+                  {
+                    "class": "Tomato___Late_blight",
+                    "confidence": 1.1975603229075205e-06
+                  }
+                ]
               },
-              "remedy_info": {
-                "error": "No remedy found for disease: Tomato Yellow Leaf Spot (Pseudomonas syringae pv. tomato)",
-                "suggestion": "Please consult with a local agricultural expert"
+              "remedy_info": null,
+              "shops_info": {
+                "location": {
+                  "lat": 9.9406,
+                  "lon": 76.2653,
+                  "display_name": "Kochi, KL, India",
+                  "city": "Kochi",
+                  "region": "KL",
+                  "country": "India"
+                },
+                "results": {
+                  "error": "No fertilizer shops found in the specified radius via OpenStreetMap",
+                  "count": 0,
+                  "shops": [],
+                  "google_maps_search_urls": [
+                    {
+                      "query": "fertilizer shop",
+                      "url": "https://www.google.com/maps/search/fertilizer+shop/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=fertilizer+shop+near+9.9406,76.2653",
+                      "description": "Search for fertilizer shop near this location"
+                    },
+                    {
+                      "query": "agricultural input store",
+                      "url": "https://www.google.com/maps/search/agricultural+input+store/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=agricultural+input+store+near+9.9406,76.2653",
+                      "description": "Search for agricultural input store near this location"
+                    },
+                    {
+                      "query": "agro shop",
+                      "url": "https://www.google.com/maps/search/agro+shop/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=agro+shop+near+9.9406,76.2653",
+                      "description": "Search for agro shop near this location"
+                    },
+                    {
+                      "query": "pesticide shop",
+                      "url": "https://www.google.com/maps/search/pesticide+shop/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=pesticide+shop+near+9.9406,76.2653",
+                      "description": "Search for pesticide shop near this location"
+                    },
+                    {
+                      "query": "seed store",
+                      "url": "https://www.google.com/maps/search/seed+store/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=seed+store+near+9.9406,76.2653",
+                      "description": "Search for seed store near this location"
+                    },
+                    {
+                      "query": "fertilizer store",
+                      "url": "https://www.google.com/maps/search/fertilizer+store/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=fertilizer+store+near+9.9406,76.2653",
+                      "description": "Search for fertilizer store near this location"
+                    }
+                  ],
+                  "note": "Use the Google Maps search URLs above to find shops directly on Google Maps (free, no API key required)"
+                }
               },
-              "shops_info": null,
+              "cnn_result": {
+                "disease": "Early Blight",
+                "crop": "Potato",
+                "full_class_name": "Potato___Early_blight",
+                "confidence": 0.9999973773956299,
+                "top_3_predictions": [
+                  {
+                    "class": "Potato___Early_blight",
+                    "confidence": 0.9999973773956299
+                  },
+                  {
+                    "class": "Tomato___Septoria_leaf_spot",
+                    "confidence": 1.269984068130725e-06
+                  },
+                  {
+                    "class": "Tomato___Late_blight",
+                    "confidence": 1.1975603229075205e-06
+                  }
+                ],
+                "is_healthy": false,
+                "all_predictions": {
+                  "Apple___Apple_scab": 1.2485111902660329e-11,
+                  "Apple___Black_rot": 1.118964934036413e-17,
+                  "Apple___Cedar_apple_rust": 6.025656141072917e-21,
+                  "Apple___healthy": 1.2146718484911664e-16,
+                  "Blueberry___healthy": 1.6687984219272496e-18,
+                  "Cherry_(including_sour)___Powdery_mildew": 9.038868905524175e-18,
+                  "Cherry_(including_sour)___healthy": 3.5701521898790063e-28,
+                  "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": 2.3407821904755655e-13,
+                  "Corn_(maize)___Common_rust_": 1.8750901168134576e-13,
+                  "Corn_(maize)___Northern_Leaf_Blight": 3.342309688850908e-16,
+                  "Corn_(maize)___healthy": 3.0736493761459213e-29,
+                  "Grape___Black_rot": 2.9359756003191448e-21,
+                  "Grape___Esca_(Black_Measles)": 1.642204772028823e-19,
+                  "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": 2.3242828106617708e-08,
+                  "Grape___healthy": 4.423207421634356e-27,
+                  "Orange___Haunglongbing_(Citrus_greening)": 9.94721925878452e-21,
+                  "Peach___Bacterial_spot": 1.900442693839044e-12,
+                  "Peach___healthy": 1.3355421288367552e-25,
+                  "Pepper,_bell___Bacterial_spot": 5.984210089265973e-12,
+                  "Pepper,_bell___healthy": 4.425467329712129e-20,
+                  "Potato___Early_blight": 0.9999973773956299,
+                  "Potato___Late_blight": 1.0369878289395729e-09,
+                  "Potato___healthy": 2.9035846463051136e-30,
+                  "Raspberry___healthy": 2.228845904837073e-31,
+                  "Soybean___healthy": 2.454678165607913e-24,
+                  "Squash___Powdery_mildew": 1.5069733239059246e-09,
+                  "Strawberry___Leaf_scorch": 8.619335289949959e-08,
+                  "Strawberry___healthy": 1.9422919437261276e-16,
+                  "Tomato___Bacterial_spot": 4.778229678245594e-13,
+                  "Tomato___Early_blight": 2.2482120609623735e-09,
+                  "Tomato___Late_blight": 1.1975603229075205e-06,
+                  "Tomato___Leaf_Mold": 5.198964089098146e-12,
+                  "Tomato___Septoria_leaf_spot": 1.269984068130725e-06,
+                  "Tomato___Spider_mites Two-spotted_spider_mite": 9.396560439805281e-20,
+                  "Tomato___Target_Spot": 3.7910204692798675e-15,
+                  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": 3.741871862125096e-21,
+                  "Tomato___Tomato_mosaic_virus": 3.018180788188246e-29,
+                  "Tomato___healthy": 1.408764683794161e-16
+                }
+              },
               "agent": "disease_agent"
             }
           ]
         },
         "output": {
-          "final_response": "**What\u2019s happening?**  \nYour tomatoes are showing the classic signs of **Tomato Yellow Leaf Spot** caused by *Pseudomonas syringae pv. tomato*. The disease starts as small, water\u2011soaked yellow spots that can merge into larger lesions, often spreading quickly if conditions are right (high humidity, poor airflow, or wet foliage).\n\n---\n\n## Quick\u2011Start Action Plan (24\u201348\u202fh)\n\n| Step | What to Do | Why It Helps |\n|------|------------|--------------|\n| **1. Inspect & Prune** | Remove all infected leaves and any that are turning yellow or brown. Cut at least 1\u202fin. below the healthy tissue. | Cuts off the bacteria\u2019s food source and reduces inoculum. |\n| **2. Improve Air Circulation** | Thin out crowded plants, prune lower leaves, and space rows 18\u201324\u202fin. apart. | Dry leaves faster \u2192 less favorable for bacterial growth. |\n| **3. Water Wisely** | Water at the soil level in the morning; avoid overhead sprinklers. | Keeps foliage dry and limits splash\u2011dispersal of bacteria. |\n| **4. Sanitize Tools** | Disinfect pruning shears with 10\u202f% bleach or 70\u202f% alcohol after each cut. | Prevents spreading the pathogen between plants. |\n| **5. Apply a Copper\u2011Based Bactericide** | If available, mix 1\u202ftsp of copper sulfate (or 1\u202foz of copper oxychloride) in 1\u202fqt of water and spray until foliage is wet. Repeat every 7\u201310\u202fdays. | Copper is the most common, inexpensive option for bacterial leaf spot. |\n| **6. Use Resistant Varieties** | For future plantings, choose cultivars labeled \u201cbacterial leaf spot resistant\u201d (e.g., \u2018Roma\u2019, \u2018San Marzano\u2019, or newer hybrids). | Genetic resistance is the most sustainable long\u2011term solution. |\n| **7. Monitor & Record** | Check plants daily for new spots. Keep a simple log (date, symptoms, treatment). | Helps you spot trends and adjust tactics early. |\n\n---\n\n## If You Need More Help\n\n- **Local Extension or Agronomist** \u2013 They can confirm the diagnosis and recommend region\u2011specific bactericides or resistant varieties.\n- **Community Forums** \u2013 Share photos on local farming groups or online forums; often other growers have practical tips for your climate.\n\n---\n\n## Fertilizer Shop Note\n\nThe disease agent didn\u2019t return any nearby fertilizer shops. If you need a copper product or other supplies, try:\n\n1. Expanding your search radius (e.g., 10\u202fmi instead of 5\u202fmi).  \n2. Checking larger garden centers or agricultural supply stores in nearby towns.  \n3. Calling local nurseries to ask if they carry copper bactericides or resistant tomato seeds.\n\n---\n\n### Bottom Line\n\nAct fast\u2014remove infected leaves, improve airflow, and apply a copper spray. Keep the plants dry and monitor closely. If the problem persists or worsens, reach out to a local expert for a tailored solution. Good luck, and your tomatoes will thank you for the early intervention!",
+          "final_response": "**Diagnosis (AI\u2011based)**  \n- **Crop:** Potato  \n- **Disease:** Early Blight (high\u2011confidence, 99.9997\u202f%)  \n- **Detection method:** CNN image analysis  \n\nThe model is almost certain that the symptoms you captured belong to Early\u202fBlight. This is a common fungal disease that can quickly reduce yield if not managed promptly.\n\n---\n\n## What to do right now\n\n| Step | Action | Why it matters | Practical tip |\n|------|--------|----------------|---------------|\n| **1** | **Isolate the affected plant** | Prevents the pathogen from spreading to healthy tubers and neighboring plants. | Keep the plant in a separate area or cover it with a plastic sheet. |\n| **2** | **Remove and destroy infected leaves** | Reduces the source of spores that spread the disease. | Cut leaves at the base, discard them in a sealed bag or burn them. |\n| **3** | **Improve airflow & spacing** | Fungi thrive in humid, stagnant air. | Thin out crowded rows and prune excess foliage. |\n| **4** | **Adjust irrigation** | Avoid overhead watering; wet leaves accelerate infection. | Water at the soil surface early in the morning or use drip irrigation. |\n| **5** | **Apply a fungicide** | Early\u202fBlight is responsive to several fungicides. | \u2022 **Copper sulfate** (1\u202fL per 100\u202fL water, apply every 7\u201310\u202fdays). <br>\u2022 **Chlorothalonil** (1\u202fL per 100\u202fL water, apply every 7\u201310\u202fdays). <br>\u2022 **Mancozeb** (1\u202fL per 100\u202fL water, apply every 7\u201310\u202fdays). <br>Always follow label instructions and rotate active ingredients to avoid resistance. |\n| **6** | **Monitor the crop** | Early detection of new spots allows quicker response. | Inspect leaves twice a week; if new lesions appear, repeat steps 2\u20135. |\n| **7** | **Consider resistant varieties** | Long\u2011term protection. | When replanting, choose varieties rated \u201cEarly\u202fBlight tolerant\u201d (e.g., \u201cKennebec\u201d or \u201cRed Pontiac\u201d). |\n\n---\n\n## Preventive care for the future\n\n- **Crop rotation** \u2013 avoid planting potatoes in the same field for 3\u20134 years.  \n- **Use certified disease\u2011free seed tubers** \u2013 check for any signs of rot or lesions before planting.  \n- **Maintain soil fertility** \u2013 balanced NPK and organic matter improve plant vigor.  \n- **Cover crops** \u2013 a light cover crop (e.g., clover) can reduce soil moisture and suppress fungal spores.  \n\n---\n\n## Nearby fertilizer shops (Kochi, KL, India)\n\n> **No shops were found within the specified radius via OpenStreetMap.**  \n> However, you can quickly locate suppliers using the links below:\n\n- **Fertilizer shop** \u2013 <https://www.google.com/maps/search/fertilizer+shop/@9.9406,76.2653,15z>\n- **Agricultural input store** \u2013 <https://www.google.com/maps/search/agricultural+input+store/@9.9406,76.2653,15z>\n- **Agro shop** \u2013 <https://www.google.com/maps/search/agro+shop/@9.9406,76.2653,15z>\n- **Pesticide shop** \u2013 <https://www.google.com/maps/search/pesticide+shop/@9.9406,76.2653,15z>\n- **Seed store** \u2013 <https://www.google.com/maps/search/seed+store/@9.9406,76.2653,15z>\n- **Fertilizer store** \u2013 <https://www.google.com/maps/search/fertilizer+store/@9.9406,76.2653,15z>\n\nIf you don\u2019t find what you need, widen the radius or try a different search term (e.g., \u201cagro input\u201d or \u201cchemical store\u201d).  \n\n---\n\n### Quick recap\n\n1. **Early\u202fBlight detected with 99.9997\u202f% confidence (CNN).**  \n2. **Act fast:** isolate, remove infected tissue, improve airflow, adjust irrigation, and apply a fungicide.  \n3. **Prevent future outbreaks** with crop rotation, resistant varieties, and good cultural practices.  \n4. **Shop for inputs** using the Google Maps links above if local suppliers are not listed.\n\nYou\u2019ve got the diagnosis and a clear action plan\u2014now it\u2019s time to protect your crop and keep those potatoes healthy!",
           "agent_outputs": [
             {
               "disease_diagnosis": {
-                "disease": "Tomato Yellow Leaf Spot (Pseudomonas syringae pv. tomato)",
-                "confidence": "medium",
+                "disease": "Early Blight",
+                "crop": "Potato",
+                "confidence": "high",
+                "confidence_score": 0.9999973773956299,
                 "needs_remedy": true,
-                "explanation": "Yellow, water\u2011soaked spots that may coalesce into larger lesions are characteristic of Tomato Yellow Leaf Spot, a bacterial disease common in tomatoes. Early detection and management (cultural practices, resistant varieties, or bactericides) are recommended to prevent spread."
+                "explanation": "CNN model detected: Potato___Early_blight with 100.0% confidence",
+                "is_healthy": false,
+                "detection_method": "CNN",
+                "top_3_predictions": [
+                  {
+                    "class": "Potato___Early_blight",
+                    "confidence": 0.9999973773956299
+                  },
+                  {
+                    "class": "Tomato___Septoria_leaf_spot",
+                    "confidence": 1.269984068130725e-06
+                  },
+                  {
+                    "class": "Tomato___Late_blight",
+                    "confidence": 1.1975603229075205e-06
+                  }
+                ]
               },
-              "remedy_info": {
-                "error": "No remedy found for disease: Tomato Yellow Leaf Spot (Pseudomonas syringae pv. tomato)",
-                "suggestion": "Please consult with a local agricultural expert"
+              "remedy_info": null,
+              "shops_info": {
+                "location": {
+                  "lat": 9.9406,
+                  "lon": 76.2653,
+                  "display_name": "Kochi, KL, India",
+                  "city": "Kochi",
+                  "region": "KL",
+                  "country": "India"
+                },
+                "results": {
+                  "error": "No fertilizer shops found in the specified radius via OpenStreetMap",
+                  "count": 0,
+                  "shops": [],
+                  "google_maps_search_urls": [
+                    {
+                      "query": "fertilizer shop",
+                      "url": "https://www.google.com/maps/search/fertilizer+shop/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=fertilizer+shop+near+9.9406,76.2653",
+                      "description": "Search for fertilizer shop near this location"
+                    },
+                    {
+                      "query": "agricultural input store",
+                      "url": "https://www.google.com/maps/search/agricultural+input+store/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=agricultural+input+store+near+9.9406,76.2653",
+                      "description": "Search for agricultural input store near this location"
+                    },
+                    {
+                      "query": "agro shop",
+                      "url": "https://www.google.com/maps/search/agro+shop/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=agro+shop+near+9.9406,76.2653",
+                      "description": "Search for agro shop near this location"
+                    },
+                    {
+                      "query": "pesticide shop",
+                      "url": "https://www.google.com/maps/search/pesticide+shop/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=pesticide+shop+near+9.9406,76.2653",
+                      "description": "Search for pesticide shop near this location"
+                    },
+                    {
+                      "query": "seed store",
+                      "url": "https://www.google.com/maps/search/seed+store/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=seed+store+near+9.9406,76.2653",
+                      "description": "Search for seed store near this location"
+                    },
+                    {
+                      "query": "fertilizer store",
+                      "url": "https://www.google.com/maps/search/fertilizer+store/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=fertilizer+store+near+9.9406,76.2653",
+                      "description": "Search for fertilizer store near this location"
+                    }
+                  ],
+                  "note": "Use the Google Maps search URLs above to find shops directly on Google Maps (free, no API key required)"
+                }
               },
-              "shops_info": null,
+              "cnn_result": {
+                "disease": "Early Blight",
+                "crop": "Potato",
+                "full_class_name": "Potato___Early_blight",
+                "confidence": 0.9999973773956299,
+                "top_3_predictions": [
+                  {
+                    "class": "Potato___Early_blight",
+                    "confidence": 0.9999973773956299
+                  },
+                  {
+                    "class": "Tomato___Septoria_leaf_spot",
+                    "confidence": 1.269984068130725e-06
+                  },
+                  {
+                    "class": "Tomato___Late_blight",
+                    "confidence": 1.1975603229075205e-06
+                  }
+                ],
+                "is_healthy": false,
+                "all_predictions": {
+                  "Apple___Apple_scab": 1.2485111902660329e-11,
+                  "Apple___Black_rot": 1.118964934036413e-17,
+                  "Apple___Cedar_apple_rust": 6.025656141072917e-21,
+                  "Apple___healthy": 1.2146718484911664e-16,
+                  "Blueberry___healthy": 1.6687984219272496e-18,
+                  "Cherry_(including_sour)___Powdery_mildew": 9.038868905524175e-18,
+                  "Cherry_(including_sour)___healthy": 3.5701521898790063e-28,
+                  "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": 2.3407821904755655e-13,
+                  "Corn_(maize)___Common_rust_": 1.8750901168134576e-13,
+                  "Corn_(maize)___Northern_Leaf_Blight": 3.342309688850908e-16,
+                  "Corn_(maize)___healthy": 3.0736493761459213e-29,
+                  "Grape___Black_rot": 2.9359756003191448e-21,
+                  "Grape___Esca_(Black_Measles)": 1.642204772028823e-19,
+                  "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": 2.3242828106617708e-08,
+                  "Grape___healthy": 4.423207421634356e-27,
+                  "Orange___Haunglongbing_(Citrus_greening)": 9.94721925878452e-21,
+                  "Peach___Bacterial_spot": 1.900442693839044e-12,
+                  "Peach___healthy": 1.3355421288367552e-25,
+                  "Pepper,_bell___Bacterial_spot": 5.984210089265973e-12,
+                  "Pepper,_bell___healthy": 4.425467329712129e-20,
+                  "Potato___Early_blight": 0.9999973773956299,
+                  "Potato___Late_blight": 1.0369878289395729e-09,
+                  "Potato___healthy": 2.9035846463051136e-30,
+                  "Raspberry___healthy": 2.228845904837073e-31,
+                  "Soybean___healthy": 2.454678165607913e-24,
+                  "Squash___Powdery_mildew": 1.5069733239059246e-09,
+                  "Strawberry___Leaf_scorch": 8.619335289949959e-08,
+                  "Strawberry___healthy": 1.9422919437261276e-16,
+                  "Tomato___Bacterial_spot": 4.778229678245594e-13,
+                  "Tomato___Early_blight": 2.2482120609623735e-09,
+                  "Tomato___Late_blight": 1.1975603229075205e-06,
+                  "Tomato___Leaf_Mold": 5.198964089098146e-12,
+                  "Tomato___Septoria_leaf_spot": 1.269984068130725e-06,
+                  "Tomato___Spider_mites Two-spotted_spider_mite": 9.396560439805281e-20,
+                  "Tomato___Target_Spot": 3.7910204692798675e-15,
+                  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": 3.741871862125096e-21,
+                  "Tomato___Tomato_mosaic_virus": 3.018180788188246e-29,
+                  "Tomato___healthy": 1.408764683794161e-16
+                }
+              },
               "agent": "disease_agent"
             }
           ],
           "agent": "coordinator"
         },
-        "timestamp": "2025-10-16T06:55:43.968565"
+        "timestamp": "2025-12-29T21:44:46.313778"
       }
     ]
   }

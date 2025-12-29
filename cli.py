@@ -4,7 +4,8 @@ AgriMitra Agentic Prototype - CLI Interface
 import json
 import os
 import sys
-from typing import Dict, Any
+import re
+from typing import Dict, Any, Optional, Tuple
 from workflow import AgriMitraWorkflow
 import logging
 
@@ -52,6 +53,10 @@ class AgriMitraCLI:
         print("• 'What's the current price of rice?'")
         print("• 'My wheat is sick and I want to know the market price'")
         print("• 'How to treat powdery mildew on my crops'")
+        print("\n🖼️ Image Input:")
+        print("• Enter a path to an image file for CNN-based disease detection")
+        print("• Example: 'path/to/plant_image.jpg'")
+        print("• Supported formats: .jpg, .jpeg, .png")
     
     def display_debug_info(self, final_state: Dict[str, Any]):
         """Display detailed debug information"""
@@ -92,14 +97,86 @@ class AgriMitraCLI:
             except Exception as e:
                 print(f"\n❌ Error saving session log: {e}")
     
+    def _is_image_path(self, input_str: str) -> Tuple[bool, Optional[str]]:
+        """Check if input is an image file path"""
+        # Common image extensions
+        image_extensions = ['.jpg', '.jpeg', '.png', '.bmp', '.gif', '.tiff', '.webp']
+        
+        # Check if input looks like a file path
+        input_stripped = input_str.strip().strip('"').strip("'")
+        
+        # Check if it ends with image extension
+        for ext in image_extensions:
+            if input_stripped.lower().endswith(ext):
+                # Check if file exists
+                if os.path.exists(input_stripped):
+                    return True, input_stripped
+                # Try relative to current directory
+                if os.path.exists(os.path.join(os.getcwd(), input_stripped)):
+                    return True, os.path.join(os.getcwd(), input_stripped)
+        
+        return False, None
+    
+    def _extract_image_and_text(self, input_str: str) -> Tuple[Optional[str], str]:
+        """Extract image path and remaining text from input if both are present"""
+        # Common image extensions
+        image_extensions = ['.jpg', '.jpeg', '.png', '.bmp', '.gif', '.tiff', '.webp']
+        
+        input_stripped = input_str.strip()
+        image_path = None
+        remaining_text = input_stripped
+        
+        # Try to find image path in the input
+        for ext in image_extensions:
+            # Look for image path patterns (with or without quotes)
+            pattern = rf'["\']?([^"\']*{re.escape(ext)})["\']?'
+            matches = re.finditer(pattern, input_stripped, re.IGNORECASE)
+            
+            for match in matches:
+                potential_path = match.group(1).strip()
+                # Check if file exists
+                if os.path.exists(potential_path):
+                    image_path = potential_path
+                    # Remove the image path from the text
+                    remaining_text = input_stripped.replace(match.group(0), '').strip()
+                    break
+                # Try relative to current directory
+                elif os.path.exists(os.path.join(os.getcwd(), potential_path)):
+                    image_path = os.path.join(os.getcwd(), potential_path)
+                    remaining_text = input_stripped.replace(match.group(0), '').strip()
+                    break
+            
+            if image_path:
+                break
+        
+        # Clean up remaining text (remove extra spaces, commas, etc.)
+        remaining_text = re.sub(r'\s+', ' ', remaining_text).strip(' ,')
+        
+        return image_path, remaining_text if remaining_text else input_stripped
+    
     def process_query(self, user_input: str, debug_mode: bool = False) -> str:
         """Process a user query through the workflow"""
         print(f"\n🤖 Processing: {user_input}")
         print("-" * 50)
         
         try:
+            # Extract both image path and text if both are present
+            image_path, remaining_text = self._extract_image_and_text(user_input)
+            
+            if image_path:
+                print(f"📸 Image detected: {image_path}")
+                if remaining_text and remaining_text != user_input:
+                    print(f"📝 Text detected: {remaining_text}")
+                    query_text = remaining_text
+                else:
+                    # For image-only input, use a generic query
+                    query_text = "Analyze this plant image for disease detection"
+            else:
+                query_text = user_input
+                image_path = None
+            
             # Run the workflow
-            final_state = self.workflow.run(user_input)
+            final_state = self.workflow.run(query_text, image_path)
             
             # Log the interaction
             log_entry = {

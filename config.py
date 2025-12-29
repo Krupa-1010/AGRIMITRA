@@ -108,10 +108,14 @@ Given outputs from disease and price agents, create a comprehensive, actionable 
 Combine all available information into a clear, helpful response that addresses the farmer's original query.
 Be practical, encouraging, and provide specific actionable steps.
 
+If the disease detection was done using CNN (image-based), mention that the diagnosis was made using AI image analysis.
+If the plant is detected as healthy, provide positive feedback and preventive care advice.
+
 If shops_info is present from the disease agent, include a short section:
 - Title: Nearby fertilizer shops
 - List up to 5 shops: name, address (if available), approx. coordinates
-- If no shops found, state that and suggest widening radius or clarifying location.
+- If google_maps_search_urls are available, mention them: "You can also search directly on Google Maps using these links: [list URLs]"
+- If no shops found, state that and suggest using the Google Maps search URLs provided or widening radius.
 """
 
 # Logging configuration

@@ -14,6 +14,7 @@ logger = logging.getLogger(__name__)
 class WorkflowState(TypedDict):
     """State schema for the LangGraph workflow"""
     user_input: str
+    image_path: Optional[str]  # Path to image file if provided
     reasoner_output: Optional[Dict[str, Any]]
     disease_agent_output: Optional[Dict[str, Any]]
     price_agent_output: Optional[Dict[str, Any]]
@@ -85,13 +86,27 @@ class AgriMitraWorkflow:
         logger.info("Executing Reasoner Node")
         
         try:
-            result = self.reasoner.process(state["user_input"])
+            # If image is provided, automatically route to disease agent
+            image_path = state.get("image_path")
+            if image_path:
+                logger.info(f"Image detected in reasoner: {image_path}, routing to disease agent")
+                result = {
+                    "reasoner_output": {
+                        "intent": ["disease"],
+                        "crop": None,  # Will be detected by CNN
+                        "agents_to_trigger": ["disease_agent"]
+                    },
+                    "user_input": state["user_input"],
+                    "next_nodes": ["disease_agent"]
+                }
+            else:
+                result = self.reasoner.process(state["user_input"])
             
             # Log execution
             execution_log = state.get("execution_log", [])
             execution_log.append({
                 "node": "reasoner",
-                "input": state["user_input"],
+                "input": {"user_input": state["user_input"], "image_path": image_path},
                 "output": result,
                 "timestamp": self._get_timestamp()
             })
@@ -126,14 +141,15 @@ class AgriMitraWorkflow:
         try:
             reasoner_data = state.get("reasoner_output", {})
             crop = reasoner_data.get("reasoner_output", {}).get("crop")
+            image_path = state.get("image_path")
             
-            result = self.disease_agent.process(state["user_input"], crop)
+            result = self.disease_agent.process(state["user_input"], crop, image_path)
             
             # Log execution
             execution_log = state.get("execution_log", [])
             execution_log.append({
                 "node": "disease_agent",
-                "input": {"user_input": state["user_input"], "crop": crop},
+                "input": {"user_input": state["user_input"], "crop": crop, "image_path": image_path},
                 "output": result,
                 "timestamp": self._get_timestamp()
             })
@@ -285,13 +301,14 @@ class AgriMitraWorkflow:
         from datetime import datetime
         return datetime.now().isoformat()
     
-    def run(self, user_input: str) -> Dict[str, Any]:
+    def run(self, user_input: str, image_path: Optional[str] = None) -> Dict[str, Any]:
         """Run the complete workflow"""
-        logger.info(f"Starting workflow with input: {user_input}")
+        logger.info(f"Starting workflow with input: {user_input}, image_path: {image_path}")
         
         # Initialize state
         initial_state = WorkflowState(
             user_input=user_input,
+            image_path=image_path,
             reasoner_output=None,
             disease_agent_output=None,
             price_agent_output=None,
